@@ -39,9 +39,9 @@ func init() {
 			"- 开盲盒\n" +
 			"- 随机壁纸\n" +
 			"- 随机表情包\n" +
-			"- 涩涩达咩/我要涩涩\n",
+			"- 涩涩达咩/涩涩姐姐\n",
 	})
-	engine.OnFullMatchGroup([]string{"随机壁纸", "兽耳", "星空", "白毛", "我要涩涩", "涩涩达咩", "白丝", "黑丝", "丝袜", "随机表情包", "cos", "盲盒", "开盲盒"}).SetBlock(true).
+	engine.OnFullMatchGroup([]string{"随机壁纸", "兽耳", "星空", "白毛", "涩涩姐姐", "涩涩达咩", "白丝", "黑丝", "丝袜", "随机表情包", "cos", "盲盒", "开盲盒"}).SetBlock(true).
 		Handle(func(ctx *zero.Ctx) {
 			var url string
 			switch ctx.State["matched"].(string) {
@@ -53,7 +53,7 @@ func init() {
 				url = baimao
 			case "星空":
 				url = xing
-			case "我要涩涩", "涩涩达咩":
+			case "涩涩姐姐", "涩涩达咩":
 				url = sese
 			case "白丝":
 				url = baisi
